@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header>
+    <h2>🎟️ Sàn bán vé</h2>
+    <div>
+        Xin chào <b id="user"></b>
+        <a href="cart.html">🛒 Giỏ hàng</a>
+        <button onclick="logout()">Đăng xuất</button>
+    </div>
+</header>
+
+<!-- BANNER VÉ HOT -->
+<section class="banner">
+    <h2>🔥 Vé HOT</h2>
+
+    <div class="slider">
+        <button onclick="prev()">◀</button>
+        <img id="slide">
+        <button onclick="next()">▶</button>
+    </div>
+</section>
+
+<!-- DANH SÁCH VÉ KHÁC -->
+<section class="content">
+    <h2>🎯 Vé đề xuất</h2>
+
+    <div class="grid">
+        <div class="card">
+            <img src="/gohan.jpg" alt="gohan">
+            <h3>Concert Sơn Tùng</h3>
+            <p>500.000 VNĐ</p>
+            <input type="number" min="1" value="1">
+            <button onclick="addToCart(this,'Concert Sơn Tùng',500000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="/goku.jpg" alt="">
+            <h3>VN vs Thái Lan</h3>
+            <p>300.000 VNĐ</p>
+            <input type="number" min="1" value="1">
+            <button onclick="addToCart(this,'VN vs Thái Lan',300000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="/ssj1.jpg" alt="">
+            <h3>Show hài</h3>
+            <p>250.000 VNĐ</p>
+            <input type="number" min="1" value="1">
+            <button onclick="addToCart(this,'Show hài',250000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="/vegito.jpg" alt="">
+            <h3>Hội thảo AI</h3>
+            <p>200.000 VNĐ</p>
+            <input type="number" min="1" value="1">
+            <button onclick="addToCart(this,'Hội thảo AI',200000)">
+                Thêm vào giỏ
+            </button>
+        </div>
+    </div>
+</section>
+
+<script src="js/auth.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/home.js"></script>
+<script>checkLogin()</script>
+</body>
+</html>
